@@ -1,0 +1,20 @@
+{
+    "name": "andsystems/lendmn-sdk",
+    "description": "LendMN SDK",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gan-Och Enkhbold",
+            "email": "ganoch@andsystems.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {"AndSystems\\Lendmn\\": "src/"}
+    },
+    "require": {
+        "php": "^7.3",
+        "guzzlehttp/guzzle": "^6.5"
+    }
+}
