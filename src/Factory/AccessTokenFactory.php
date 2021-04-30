@@ -20,8 +20,6 @@ class AccessTokenFactory
 
     private static function validateAccessTokenArray($arr): void
     {
-        Factory::checkMalformedParam($arr, 'accessToken');
-        Factory::checkMalformedParam($arr, 'expiresIn');
-        Factory::checkMalformedParam($arr, 'scope');
+        Factory::checkKeysOfArray($arr, ['accessToken', 'expiresIn', 'scope']);
     }
 }

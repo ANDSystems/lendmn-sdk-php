@@ -21,9 +21,6 @@ class InvoiceFactory
 
     private static function validateInvoiceArray($arr): void
     {
-        Factory::checkMalformedParam($arr, 'amount');
-        Factory::checkMalformedParam($arr, 'invoiceNumber');
-        Factory::checkMalformedParam($arr, 'qr_link');
-        Factory::checkMalformedParam($arr, 'qr_string');
+        Factory::checkKeysOfArray($arr, ['invoiceNumber', 'amount', 'qr_link', 'qr_string']);
     }
 }

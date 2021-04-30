@@ -27,4 +27,10 @@ class Factory
 
         return $var;
     }
+
+    public static function checkKeysOfArray($arr, $keys) {
+        foreach($keys as $key) {
+            self::checkMalformedParam($arr, $key);
+        }
+    }
 }

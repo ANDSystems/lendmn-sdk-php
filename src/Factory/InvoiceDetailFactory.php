@@ -28,13 +28,7 @@ class InvoiceDetailFactory
 
     private static function validateInvoiceDetailArray($arr): void
     {
-        Factory::checkMalformedParam($arr, 'invoiceNumber');
-        Factory::checkMalformedParam($arr, 'status');
-        Factory::checkMalformedParam($arr, 'amount');
-        Factory::checkMalformedParam($arr, 'description');
-        Factory::checkMalformedParam($arr, 'trackingData');
-        Factory::checkMalformedParam($arr, 'createdAt');
-        Factory::checkMalformedParam($arr, 'expireDate');
+        Factory::checkKeysOfArray($arr, ['invoiceNumber', 'status', 'amount', 'description', 'trackingData', 'createdAt', 'expireDate']);
         Factory::checkMalformedParam($arr, 'paidDate', false);
     }
 }

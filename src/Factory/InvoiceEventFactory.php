@@ -21,7 +21,6 @@ class InvoiceEventFactory
 
     private static function validateInvoiceEventArray($arr): void
     {
-        Factory::checkMalformedParam($arr, 'data');
-        Factory::checkMalformedParam($arr, 'eventType');
+        Factory::checkKeysOfArray($arr, ['data', 'eventType']);
     }
 }

@@ -23,10 +23,6 @@ class UserFactory
 
     private static function validateUserArray($arr): void
     {
-        Factory::checkMalformedParam($arr, 'userId');
-        Factory::checkMalformedParam($arr, 'firstName');
-        Factory::checkMalformedParam($arr, 'lastName');
-        Factory::checkMalformedParam($arr, 'phoneNumber');
-        // self::checkMalformedParam($arr, 'email');
+        Factory::checkKeysOfArray($arr, ['userId', 'firstName', 'lastName', 'phoneNumber']);
     }
 }
