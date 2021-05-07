@@ -41,7 +41,7 @@ class Client implements LoggerAwareInterface
     protected $clientWrapper;
 
     /**
-     * @param string          $baseUrl      Server base url (beta: https://mgw.test.lending.mn )
+     * @param string          $baseUrl      Server base url (beta: https://b2b.lend.mn )
      * @param string          $publicKey    key used to validate EventHook
      * @param string          $clientId     provied client id
      * @param string          $clientSecret
