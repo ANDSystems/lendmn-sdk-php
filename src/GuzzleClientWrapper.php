@@ -71,8 +71,8 @@ class GuzzleClientWrapper
         } catch (GuzzleException $ex) {
             throw new LogicException('Unable to access LendMN API ['.$path.']', 1, $ex);
         }
-
-        $resp = json_decode($res->getBody(), true);
+        $body = (string)$res->getBody();
+        $resp = json_decode($body, true);
         $json_err = json_last_error();
         if (JSON_ERROR_NONE !== $json_err) {
             throw new JsonException('Invalid response from LendMN, expecting json ['.$path.']', $json_err);
